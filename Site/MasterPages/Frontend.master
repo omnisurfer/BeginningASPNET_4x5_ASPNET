@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Frontend.master.cs" Inherits="MasterPages_Frontend" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>CosaNostra Pizza</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManger1" EnablePageMethods="true" runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+            </Scripts>
+        </asp:ScriptManager>
+        <div id="PageWrapper">
+            <header>
+                <h1>CosaNostra Pizza: <span class="HighlightRed">Untouchable Service for <span class="Underline">Every</span> Delivery</span>.</h1>
+            </header>
+            <nav>
+                <asp:Menu ID="Menu" runat="server" CssClass="MainMenu" DataSourceID="CosaNostraPizzaSitemap" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False">
+                </asp:Menu>
+                <asp:TreeView ID="TreeView" runat="server" DataSourceID="CosaNostraPizzaSitemap" ShowExpandCollapse="False">
+                    <LevelStyles>
+                        <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
+                    </LevelStyles>
+                </asp:TreeView>
+
+                <br />
+                <asp:SiteMapDataSource ID="CosaNostraPizzaSitemap" runat="server" ShowStartingNode="False" />
+            </nav>
+            <section id="MainContent">
+                <asp:SiteMapPath ID="SiteMapPath" runat="server"></asp:SiteMapPath>
+                <br />
+                <br />
+                <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+                    <h1>No content has been made for this page at this time.</h1>
+                </asp:ContentPlaceHolder>
+            </section>
+            <aside id="Sidebar">
+                <span class="HighlightRed">Selected Theme</span>
+                <br />
+                <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+                    <asp:ListItem Value="DarkGray">Dark Gray</asp:ListItem>
+                    <asp:ListItem Value="Italian">Italian</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <br />
+                <uc1:Banner ID="Banner1" runat="server" DisplayDirection="Vertical" />
+                <br />
+            </aside>
+            <footer>
+                Mafia owned and operated since 2023
+            </footer>
+        </div>
+        <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

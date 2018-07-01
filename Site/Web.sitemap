@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="~/" title="Home"  description="Home">
+    <siteMapNode url="~/Default.aspx" title="Home"  description="Go to the homepage" />
+
+    <siteMapNode url="~/Deliverators/Default.aspx" title="Deliverators"  description="About the Deliverators" >
+      <siteMapNode url="~/Deliverators/Active.aspx" title="Active" description="All Active Deliverators"/>
+      <siteMapNode url="~/Deliverators/Retired.aspx" title="Retired" description="All Retired Deliverators"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/PhotoAlbums/" title="Gig Pics" description="All Gig Pics">
+      <siteMapNode url="~/PhotoAlbums/Default.aspx" title="Gig Pics" description="All Gig Pics"/>
+      <siteMapNode url="~/NewPhotoAlbums.aspx" title="New Album" description="Create a new Photo Album with Gig Pic"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/About/Default.aspx" title="About" description="About CosaNostra Pizza Site" >
+      <siteMapNode url="~/About/Contact.aspx" title="Contact Us" description="Contact CosaNostra Pizza"/>
+      <siteMapNode url="~/About/AboutUs.aspx" title="About Us" description="About CosaNostra Pizza"/>
+    </siteMapNode>
+
+    <siteMapNode url="~/Login.aspx" title="Login" description="Login to CosaNostra Pizza" />
+
+  </siteMapNode>
+</siteMap>
+
+
